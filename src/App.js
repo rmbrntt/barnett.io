@@ -23,7 +23,7 @@ class App extends Component {
             <Card />
           </div>
           <div className="ten wide left floated column">
-            <h1 className='ui header inverted'>Software Development and Process Engineering</h1>
+            <h1 className='ui header inverted'>Fullstack Development and Process Engineering</h1>
             <h2>Building applications that streamline workflows and help teams get the most out of their work.</h2>
           </div>
         </div>
@@ -39,7 +39,7 @@ class App extends Component {
           <p>Ribeye hamburger porchetta pork leberkas strip steak tail alcatra. Short loin rump cow shank ham bacon, meatloaf beef landjaeger shoulder porchetta frankfurter pastrami alcatra. </p>
         </div>
         <div className="six wide right floated column">
-          <img src={PlaceholderImage} className="ui large bordered rounded image"/>
+          <img src={PlaceholderImage} className="ui large bordered rounded image" alt="Project"/>
         </div>
       </div>
       <div className="row">

@@ -5,6 +5,7 @@ import MenuFixed from './MenuFixed';
 import MenuSidebar from './MenuSidebar';
 import Card from './Card';
 import PlaceholderImage from "../../images/placeholder_image.png";
+import {Router, Route, Link} from 'react-router-dom';
 
 class Home extends Component {
     render() {
@@ -70,6 +71,7 @@ class Home extends Component {
                         <h3 className="ui header">Blog Feed 2</h3>
                         <p>Tenderloin pork sirloin cow picanha ham capicola bresaola fatback ham hock swine prosciutto tri-tip meatball ball tip. Corned beef tri-tip landjaeger ribeye, bacon salami cupim.</p>
                         <a className="ui large button">Read More</a>
+
                     </div>
                 </div>
 

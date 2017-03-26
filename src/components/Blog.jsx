@@ -22,18 +22,15 @@ const Blog = ({match}) => (
     <div className="ui vertical stripe segment">
         <div className="ui stackable grid container">
             <div className='three wide column'>
-                <Route path={`${match.url}/:slug`} component={Back}/>
-                <Route exact path={match.url} render={() => (
-                    <h3>recent articles</h3>
-                )}/>
+              <h3 className='ui header'>recent articles</h3>
                 <RecentArticles match={match} articles={ARTICLES}/>
+                <Route path={`${match.url}/:slug`} component={Back}/>
             </div>
             <div className='thirteen wide stretched column'>
                 <Route path={`${match.url}/:slug`} component={ArticleContent}/>
-                <Route exact path={match.url} render={() => (<ArticleList match={match} articles={ARTICLES}/>)}/>
+                <Route exact path={match.url} render={() => (<ArticleList match={match} articles={ARTICLES} size={3}/>)}/>
             </div>
         </div>
-
     </div>
 )
 
@@ -49,6 +46,7 @@ const RecentArticles = React.createClass({
         return (
             <div className="ui vertical fluid tabular menu">
                 {recentArticles}
+                {this.props.children}
             </div>
         );
     }
@@ -68,7 +66,8 @@ const ArticleContent = ({match}) => {
 
 const Back = () => (
     <Link to="/blog" className='item'>
-        <h3>back</h3>
+        <i className="left chevron icon"></i>
+        back to index
     </Link>
 )
 

@@ -1,23 +1,39 @@
 import React from 'react';
+import {Router, Link} from 'react-router-dom';
 
-const Article = () => (
-  <div>
-    <div className="ui raised very padded text container segment">
-        <h3 className="ui header">Article Title 1</h3>
-        <p>Spicy jalapeno bacon ipsum dolor amet t-bone burgdoggen bacon, jerky salami kielbasa biltong meatloaf pancetta sirloin. Capicola filet mignon bresaola beef ribs swine, porchetta picanha pork shoulder.</p>
-        <a className="ui large button">Read More</a>
-    </div>
-    <div className="ui raised very padded text container segment">
-        <h3 className="ui header">Article Title 2</h3>
-        <p>Tenderloin pork sirloin cow picanha ham capicola bresaola fatback ham hock swine prosciutto tri-tip meatball ball tip. Corned beef tri-tip landjaeger ribeye, bacon salami cupim.</p>
-        <a className="ui large button">Read More</a>
-    </div>
-    <div className="ui raised very padded text container segment">
-        <h3 className="ui header">Article Title 3</h3>
-        <p>Spicy jalapeno bacon ipsum dolor amet t-bone burgdoggen bacon, jerky salami kielbasa biltong meatloaf pancetta sirloin. Capicola filet mignon bresaola beef ribs swine, porchetta picanha pork shoulder.</p>
-        <a className="ui large button">Read More</a>
-    </div>
-  </div>
-)
+class Article extends React.Component {
+render() {
+  return (
 
-export default Article;
+      <div className="ui raised very padded text container segment">
+          <h3 className="ui header">{this.props.title}</h3>
+          <p>{this.props.content}</p>
+          <Link to={`${this.props.match.url}/${this.props.slug}`} className="ui large button">Read More</Link>
+      </div>
+    )
+    }
+  }
+
+
+
+const ArticleList = React.createClass({
+  render: function() {
+    const articles = this.props.articles.map((article) => {
+      return (
+        <Article
+          title={article.title}
+          content={article.content}
+          match={this.props.match}
+          slug={article.slug}
+        />
+      );
+    });
+    return (
+      <div>
+        {articles}
+      </div>
+    );
+  },
+});
+
+export default ArticleList;

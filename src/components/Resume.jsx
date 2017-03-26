@@ -103,7 +103,7 @@ class PositionDetails extends React.Component {
 }
 
 const Resume = () => (
-    <div className='ui container very padded segment'>
+    <div className='ui stackable container very padded segment'>
         <div className='ui eight column grid contact-header'>
             <div className='ui eight wide left floated column'>
                 <div className='name'>Ryan M. Barnett</div>

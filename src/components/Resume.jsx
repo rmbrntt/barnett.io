@@ -112,10 +112,9 @@ const Resume = () => (
             <div className='ui three wide right floated right aligned column'>
                 <div className='detail'>&#114;&#121;&#097;&#110;&#064;&#098;&#097;&#114;&#110;&#101;&#116;&#116;&#046;&#105;&#111;</div>
                 <div className='detail'>
-                    <Link to='https://github.com/rmbrntt'>github.com/rmbrntt</Link>
+                    <Link to='https://github.com/rmbrntt' target="_blank">github.com/rmbrntt</Link>
                 </div>
             </div>
-
         </div>
         <div className='ui divider'></div>
         <div>

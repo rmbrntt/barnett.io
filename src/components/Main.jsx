@@ -5,6 +5,7 @@ import Header from './Header';
 import Footer from './Footer';
 import Blog from './Blog';
 import Contact from './ContactForm';
+import Resume from './Resume';
 const Main = () => (
     <Router>
         <div>
@@ -18,15 +19,6 @@ const Main = () => (
     </Router>
 
 )
-
-const Resume = () => (
-    <div>
-        <h2>Resume</h2>
-    </div>
-)
-
-
-
 
 
 export default Main

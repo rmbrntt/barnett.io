@@ -6,19 +6,19 @@ const Blog = ({match}) => (
     <div className="ui vertical stripe segment">
         <div className="ui stackable grid container">
             <div className='four wide column'>
-              <Route path={`${match.url}/:topicId`} component={Topic}/>
+              <Route path={`${match.url}/:articleId`} component={ArticleContent}/>
               <Route exact path={match.url} render={() => (
                   <h3>recent articles</h3>
               )}/>
                 <div className="ui vertical fluid tabular menu">
-                    <NavLink to={`${match.url}/rendering`} className='item'>
-                        Rendering with React
+                    <NavLink to={`${match.url}/article-1`} className='item'>
+                        Article Title 1
                     </NavLink>
-                    <NavLink to={`${match.url}/components`} className='item'>
-                        Components
+                    <NavLink to={`${match.url}/article-2`} className='item'>
+                        Article Title 2
                     </NavLink>
-                    <NavLink to={`${match.url}/props-v-state`} className='item'>
-                        Props v. State
+                    <NavLink to={`${match.url}/article-3`} className='item'>
+                        Article Title 3
                     </NavLink>
                 </div>
             </div>
@@ -32,9 +32,9 @@ const Blog = ({match}) => (
     </div>
 )
 
-const Topic = ({match}) => (
+const ArticleContent = ({match}) => (
     <div>
-        <h3>{match.params.topicId}</h3>
+        <h3>{match.params.articleId}</h3>
     </div>
 )
 

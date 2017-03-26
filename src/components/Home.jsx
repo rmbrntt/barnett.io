@@ -72,7 +72,7 @@ class Home extends Component {
                         <a className="ui large button">Read More</a>
                     </div>
                 </div>
-                
+
             </div>
 
         );

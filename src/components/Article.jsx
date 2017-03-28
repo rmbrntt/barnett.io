@@ -1,6 +1,8 @@
 import React from 'react';
 import {Router, Link} from 'react-router-dom';
 
+
+//TODO: refactor stateless functions to use destructured assignment syntax
 class Article extends React.Component {
     render() {
         return (

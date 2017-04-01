@@ -1,7 +1,7 @@
 import React from 'react'
 import {BrowserRouter as Router, Route, Link, NavLink} from 'react-router-dom'
 import ArticleListContainer from '../containers/ArticleListContainer';
-
+import BlogMenu from './BlogMenu';
 
 // function getArticlesFromApiAsync() {
 //   return fetch('http://127.0.0.1:8000/articles/')
@@ -33,11 +33,7 @@ import ArticleListContainer from '../containers/ArticleListContainer';
 const Blog = ({match}) => (
     <div className="ui vertical stripe segment">
         <div className="ui stackable grid container">
-            {/* <div className='three wide column'>
-              <h3 className='ui header'>recent articles</h3>
-                <RecentArticles match={match} articles={ARTICLES}/>
-                <Route path={`${match.url}/:slug`} component={Back}/>
-            </div> */}
+            <BlogMenu match={match} />
             <div className='thirteen wide stretched column'>
                 {/* <Route path={`${match.url}/:slug`} component={ArticleContent}/> */}
                 <Route exact path={match.url} render={() => (<ArticleListContainer/>)}/>
@@ -46,24 +42,8 @@ const Blog = ({match}) => (
     </div>
 )
 
-// const RecentArticles = React.createClass({
-//     render: function() {
-//         const recentArticles = this.props.articles.slice(0, 5).map((article) => {
-//             return (
-//                 <NavLink to={`${this.props.match.url}/${article.slug}`} className='item'>
-//                     {article.title}
-//                 </NavLink>
-//             );
-//         });
-//         return (
-//             <div className="ui vertical fluid tabular menu">
-//                 {recentArticles}
-//                 {this.props.children}
-//             </div>
-//         );
-//     }
-// });
-//
+
+
 // const find = (slug) => ARTICLES.find(article => article.slug == slug)
 //
 // const ArticleContent = ({match}) => {
@@ -76,11 +56,6 @@ const Blog = ({match}) => (
 //     )
 // }
 
-const Back = () => (
-    <Link to="/blog" className='item'>
-        <i className="left chevron icon"></i>
-        back to index
-    </Link>
-)
+
 
 export default Blog;

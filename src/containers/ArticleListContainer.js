@@ -28,6 +28,6 @@ class ArticleListContainer extends React.Component {
     render() {
       return <ArticleList articles={this.state.articles} />;
     }
-}
+};
 
 export default ArticleListContainer;

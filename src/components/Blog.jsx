@@ -1,6 +1,6 @@
 import React from 'react'
 import {BrowserRouter as Router, Route, Link, NavLink} from 'react-router-dom'
-import ArticleListContainer from '../containers/ArticleListContainer';
+import ArticleList from './ArticleList';
 import BlogMenu from './BlogMenu';
 
 // function getArticlesFromApiAsync() {
@@ -30,31 +30,17 @@ import BlogMenu from './BlogMenu';
 //     }
 // ]
 
-const Blog = ({match}) => (
+const Blog = ({match, articles}) => (
     <div className="ui vertical stripe segment">
         <div className="ui stackable grid container">
-            <BlogMenu match={match} />
+            <BlogMenu match={match} articles={articles} />
             <div className='thirteen wide stretched column'>
                 {/* <Route path={`${match.url}/:slug`} component={ArticleContent}/> */}
-                <Route exact path={match.url} render={() => (<ArticleListContainer/>)}/>
+                <Route exact path={match.url} render={() => (<ArticleList articles={articles} />)}/>
             </div>
         </div>
     </div>
 )
-
-
-
-// const find = (slug) => ARTICLES.find(article => article.slug == slug)
-//
-// const ArticleContent = ({match}) => {
-//     const article = find(match.params.slug)
-//     return (
-//         <div className="ui raised very padded text container segment">
-//             <h3 className="ui header">{article.title}</h3>
-//             <p>{article.content}</p>
-//         </div>
-//     )
-// }
 
 
 

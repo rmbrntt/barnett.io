@@ -27,29 +27,29 @@ const Back = () => (
 )
 
 class BlogMenu extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            articles: [],
-            listLength: 5
-        }
-    }
-    componentDidMount() {
-        return fetch('http://127.0.0.1:8000/articles/').then((response) => response.json()).then((responseJson) => {
-            console.log(responseJson);
-            return responseJson;
-        }).catch((error) => {
-            console.error(error);
-        }).then((data) => {
-            this.setState({articles: data});
-        });
-    }
+    // constructor(props) {
+    //     super(props);
+    //     this.state = {
+    //         articles: [],
+    //         listLength: 5
+    //     }
+    // }
+    // componentDidMount() {
+    //     return fetch('http://127.0.0.1:8000/articles/').then((response) => response.json()).then((responseJson) => {
+    //         console.log(responseJson);
+    //         return responseJson;
+    //     }).catch((error) => {
+    //         console.error(error);
+    //     }).then((data) => {
+    //         this.setState({articles: data});
+    //     });
+    // }
 
     render() {
         return (
             <div className='three wide column'>
                 <h3 className='ui header'>recent articles</h3>
-                <RecentArticles match={this.props.match} articles={this.state.articles}/>
+                <RecentArticles match={this.props.match} articles={this.props.articles}/>
                 <Route path={`${this.props.match.url}/:slug`} component={Back}/>
             </div>
         );

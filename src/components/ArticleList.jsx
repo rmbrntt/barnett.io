@@ -1,4 +1,4 @@
-import Article from './Article';
+import ArticleSnippet from './ArticleSnippet';
 import React from 'react';
 
 class ArticleList extends React.Component {
@@ -12,7 +12,7 @@ class ArticleList extends React.Component {
         .slice(0, listLength)
         .map((article) => {
             return (
-              <Article
+              <ArticleSnippet
               title={article.title}
               content={article.content}
               slug={article.slug}/>

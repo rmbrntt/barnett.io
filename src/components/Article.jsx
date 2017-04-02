@@ -18,8 +18,8 @@ class Article extends React.Component {
         super(props);
     }
     render() {
-      console.log(this.props.match.params)
-      console.log(this.props.articles)
+      // console.log(this.props.match.params)
+      // console.log(this.props.articles)
         // const articles = this.props.articles;
         // const match = this.props.match;
         const find = (slug) => this.props.articles.find(article => article.slug == slug);
@@ -36,6 +36,7 @@ class Article extends React.Component {
                 </div>
             )
         };
+
         return (
           <ArticleContent match={match} />
 )

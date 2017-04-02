@@ -26,7 +26,7 @@ class BlogContainer extends React.Component {
     }
 
     render() {
-      return <Blog articles={this.state.articles} match={this.props.match}/>;
+      return <Blog articles={this.state.articles} path={this.props.match.url} />;
     }
 };
 

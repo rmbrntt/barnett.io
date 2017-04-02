@@ -5,7 +5,7 @@ const RecentArticles = React.createClass({
     render: function() {
         const recentArticles = this.props.articles.slice(0, 5).map((article) => {
             return (
-                <NavLink to={`${this.props.match.url}/${article.slug}`} className='item'>
+                <NavLink to={`${this.props.path}/${article.slug}`} className='item'>
                     {article.title}
                 </NavLink>
             );
@@ -49,8 +49,8 @@ class BlogMenu extends React.Component {
         return (
             <div className='three wide column'>
                 <h3 className='ui header'>recent articles</h3>
-                <RecentArticles match={this.props.match} articles={this.props.articles}/>
-                <Route path={`${this.props.match.url}/:slug`} component={Back}/>
+                <RecentArticles path={this.props.path} articles={this.props.articles}/>
+                <Route path={`${this.props.path}/:slug`} component={Back}/>
             </div>
         );
     }

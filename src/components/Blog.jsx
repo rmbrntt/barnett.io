@@ -2,6 +2,7 @@ import React from 'react'
 import {BrowserRouter as Router, Route, Link, NavLink} from 'react-router-dom'
 import ArticleList from './ArticleList';
 import BlogMenu from './BlogMenu';
+import Article from './Article';
 
 // function getArticlesFromApiAsync() {
 //   return fetch('http://127.0.0.1:8000/articles/')
@@ -29,19 +30,44 @@ import BlogMenu from './BlogMenu';
 //         slug: 'article-3'
 //     }
 // ]
+class Blog extends React.Component {
+    constructor(props) {
+        super(props);
+    }
 
-const Blog = ({match, articles}) => (
-    <div className="ui vertical stripe segment">
-        <div className="ui stackable grid container">
-            <BlogMenu match={match} articles={articles} />
-            <div className='thirteen wide stretched column'>
-                {/* <Route path={`${match.url}/:slug`} component={ArticleContent}/> */}
-                <Route exact path={match.url} render={() => (<ArticleList articles={articles} />)}/>
+    render() {
+        return (
+            <div className="ui vertical stripe segment">
+                <div className="ui stackable grid container">
+                    <BlogMenu path={this.props.path} articles={this.props.articles}/>
+                    <div className='thirteen wide stretched column'>
+                        <Route path={`${this.props.path}/:slug`} render={(props) => (<Article articles={this.props.articles} {...props}/>)}/>
+                        <Route exact path={this.props.path} render={() => (<ArticleList articles={this.props.articles}/>)}/>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-)
+        )
+    }
+}
 
 
+
+// const Article = React.createClass({
+//     render: function() {
+//         const slug = this.props.match.params.slug;
+//         const articles = this.props.articles;
+//         console.log(slug);
+//         console.log(articles);
+//         const article = articles.find(article => article.slug == slug)
+//
+//
+//         return (
+//             <div className="ui raised very padded text container segment">
+//                 <h3 className="ui header">{article.title}</h3>
+//                 <p>{article.content}</p>
+//             </div>
+//         );
+//     }
+// });
 
 export default Blog;

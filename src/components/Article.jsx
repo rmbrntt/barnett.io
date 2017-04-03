@@ -14,9 +14,6 @@ import {BrowserRouter as Router, Route, Link, NavLink} from 'react-router-dom'
 // }
 
 class Article extends React.Component {
-    constructor(props) {
-        super(props);
-    }
     render() {
       // console.log(this.props.match.params)
       // console.log(this.props.articles)

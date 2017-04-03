@@ -1,6 +1,8 @@
 import React from 'react'
 import Blog from '../components/Blog';
-
+import BlogFeed from '../components/BlogFeed';
+import getBlogArticles from '../utils/blogHelpers'
+import {BrowserRouter as Router, Route, Link, NavLink} from 'react-router-dom'
 
 
 class BlogContainer extends React.Component {
@@ -11,22 +13,20 @@ class BlogContainer extends React.Component {
             listLength: 5,
         };
     }
+
     componentDidMount() {
-      return fetch('http://127.0.0.1:8000/articles/')
-      .then((response) => response.json())
-      .then((responseJson) => {
-          console.log(responseJson);
-          return responseJson;
-      })
-      .catch((error) => {
-          console.error(error);
-      }).then((data) => {
+      return getBlogArticles().then((data) => {
         this.setState({articles: data});
       });
     }
 
     render() {
-      return <Blog articles={this.state.articles} path={this.props.match.url} />;
+      return (
+        <div>
+          <Route path="/blog" render={(props) => (<Blog articles={this.state.articles} path={this.props.match.url} />)}/>
+          <Route exact path="/" render={(props) => (<BlogFeed articles={this.state.articles} />)}/>
+          {/* <Blog articles={this.state.articles} path={this.props.match.url} /> */}
+      </div>)
     }
 };
 

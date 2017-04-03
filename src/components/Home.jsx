@@ -6,6 +6,7 @@ import MenuSidebar from './MenuSidebar';
 import Card from './Card';
 import PlaceholderImage from "../../images/placeholder_image.png";
 import {Router, Route, Link} from 'react-router-dom';
+import BlogContainer from '../containers/BlogContainer';
 
 class Home extends Component {
     render() {
@@ -61,7 +62,7 @@ class Home extends Component {
                         </div>
                     </div>
                 </div>
-                <div className="ui vertical stripe segment">
+                {/* <div className="ui vertical stripe segment">
                     <div className="ui text container">
                         <h3 className="ui header">Blog Feed 1</h3>
                         <p>Spicy jalapeno bacon ipsum dolor amet t-bone burgdoggen bacon, jerky salami kielbasa biltong meatloaf pancetta sirloin. Capicola filet mignon bresaola beef ribs swine, porchetta picanha pork shoulder.</p>
@@ -73,7 +74,8 @@ class Home extends Component {
                         <a className="ui large button">Read More</a>
 
                     </div>
-                </div>
+                </div> */}
+                <BlogContainer />
 
             </div>
 

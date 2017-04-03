@@ -31,10 +31,6 @@ import Article from './Article';
 //     }
 // ]
 class Blog extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         return (
             <div className="ui vertical stripe segment">

@@ -7,14 +7,15 @@ const POSITIONS = [
         company: 'KCIC',
         location: 'Washington, DC',
         date: 'June 2016 - Present',
-        title: 'Development Process Manager',
+        title: 'Development Manager',
         details: [
-          'Optimized the SDLC workflow against bottlenecks and automated the capture of SOC 2 audit data points, streamlining the development process while decreasing time to market by 33%',
-          'Drove the initiative to adopt and implement industry best practices such as continuous delivery, tech debt reduction, and point estimations to mitigate a pattern of high risk releases',
-          'Cultivated the technical expertise of 15+ non-technical client teams by training product management and value driven delivery techniques, cutting backlog waste an average of 20% per client',
-          'Transformed communication company-wide by founding knowledge bases for Dev, QA, Ops, and Consulting teams where meeting minutes, specs, processes, tasks, etc. could be collaborated on and shared across all lines of business, promoting collective expertise and transparency',
-          'Facilitated the removal of team impediments, monitored sprint health, measured performance, and operated as primary point of contact for change management on every sprint',
-          'Led 40+ releases through all lifecycle phases (Planning, Development, QA, UAT and Deployment), balancing development risks, audit compliance and product delivery uptime',
+          'Developed a SPA in React to act as the frontend interface for a suite of microservice backends',
+          'Built out a microservice infrastructure on Docker and NGINX to expose Python and Node REST APIs',
+          'Engineered a machine learning pipeline to stream SQL data and preprocess for downstream training of sklearn and tensorflow regression and classification models',
+          'Implemented NLP models in gensim and spacy for tagging and classifying word vectors and named entities',
+          'Led 40+ sprints through the development lifecycle, balancing risk, audit compliance and product delivery uptime',
+          'Increased release frequency 33% by optimizing SDLC cycle times and automating the capture of SOC 2 audit data points',
+          'Cultivated the technical expertise of consulting teams by training product management and value driven delivery techniques, cutting backlog waste an average of 20% per team',
         ]
     }, {
         company: 'KCIC',
@@ -22,10 +23,11 @@ const POSITIONS = [
         date: 'June 2015 - June 2016',
         title: 'Lead QA Engineer',
         details: [
-          'Developed a regression test suite that pulled an API payload of business scenarios independently maintained by client teams which was bound to an automation framework coded in C# that covered over 80% of the platform',
-          'Established the standard for requirements gathering by designing the BDD/Gherkin infrastructure on business models and repetitiously trained the method to all teams (technical and non-technical)',
-          'Engineered a continuous integration pipeline to run a regression test suite as a grid of hub and nodes for parallel browser execution against a web application, reducing investment on manual testing by 40 hours per sprint and significantly decreasing defect rate',
-          'Automated process analysis and performance indicators by developing a library of custom data analysis metrics in Python that leveraged data extracts from the JIRA API',
+          'Developed a page object model test suite in C# for automated UI regression testing of a large scale web platform, providing over 85% coverage',
+          'Created an API service to fetch and integrate remotely maintained BDD/Gherkin features on test suite deploy and execution',
+          'Built a continuous integration pipeline to deploy a grid of nodes for parallelized and multi-browser execution of tests, reducing manual testing utilization over 40 hours per sprint',
+          'Designed an API middleware service in Python to process webhook requests from the DevOps toolchain, automating triggers and dependencies in the DevOps workflow across independent services (Bamboo, Bitbucket, JIRA, Octopus, etc)',
+          'Transformed the quality of delivered work and institutional knowledge retainment company-wide by establishing knowledge bases for Tech and Consulting teams to transparently collaborate on projects, requirements, meetings, and timelines.',
         ]
     },
     {
@@ -34,9 +36,9 @@ const POSITIONS = [
         date: 'August 2013 - June 2015',
         title: 'Test Lead',
         details: [
-          'Performed peer code reviews of proprietary algorithms, validated unit tests and translated logic into flowcharts as supplements to requirements',
           'Developed automated tests for a web application using Python and Selenium WebDriver',
-          'Led a team of test analysts to execute manual coverage of releases by designing test cases and scripts for functional, regression, and acceptance testing',
+          'Led a team of test analysts through each release to perform regression and acceptance testing',
+          'Performed code reviews of predictive algorithms written in SAS, unit tested logic and translated into pseudo code for requirements',
         ]
     }
 ]

@@ -4,15 +4,15 @@ const Footer = () => (
   <div className="ui inverted vertical footer segment">
       <div className="ui container">
           <div className="ui stackable inverted divided centered equal height stackable grid">
-              <div className="three wide column">
-                  <h4 className="ui inverted header">Things</h4>
+              {/* <div className="three wide column">
+                  <h4 className="ui inverted header">rand-o-list</h4>
                   <div className="ui inverted link list">
                       <a href="https://news.ycombinator.com/" className="item">Hacker News</a>
                   </div>
-              </div>
-              <div className="seven wide column">
+              </div> */}
+              <div className="five wide column">
                   <h4 className="ui inverted header">About</h4>
-                  <p>Just a guy who likes to code and <s>break</s>build things.</p>
+                  <p>I like building things in Python and React. I'm also familiar with C#, SQL and Node. </p>
               </div>
           </div>
       </div>

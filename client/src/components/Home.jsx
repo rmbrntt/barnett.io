@@ -5,12 +5,18 @@ import MenuFixed from './MenuFixed';
 import MenuSidebar from './MenuSidebar';
 import Card from './Card';
 import PlaceholderImage from "../images/placeholder_image.png";
+import AugurImage from "../images/augurlabs.png";
+
 import {Router, Route, Link} from 'react-router-dom';
+import { Container, Header, Icon, Item, Grid, Image, Divider, Button, Label } from 'semantic-ui-react';
+
+
+
 
 class Home extends Component {
     render() {
         return (
-            <div>
+            <Container fluid>
               <div className='ui inverted vertical masthead center aligned segment'>
                     <div className="ui middle aligned stackable grid container">
                         <div className="row">
@@ -18,34 +24,42 @@ class Home extends Component {
                                 <Card/>
                             </div>
                             <div className="ten wide left floated column">
-                                <h1 className='ui header inverted'>Fullstack Development and Process Engineering</h1>
-                                <h2>Building applications that streamline workflows and help teams get the most out of their work.</h2>
+                                <h1 className='ui header inverted'>Fullstack Developer and Applied ML Engineer</h1>
+                                <h2>Building applications that implement machine learning pipelines to streamline business workflows.</h2>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className="ui vertical stripe segment">
                     <div className="ui middle aligned stackable grid container">
-                        <div className="row">
-                            <div className="eight wide column">
-                                <h3 className="ui header">Project Placeholder 1</h3>
-                                <p>Doner short ribs chicken, shank ham hock pork meatball frankfurter meatloaf. Chuck porchetta kevin bacon hamburger turkey.</p>
-                                <h3 className="ui header">Project Placeholder 2</h3>
-                                <p>Ribeye hamburger porchetta pork leberkas strip steak tail alcatra. Short loin rump cow shank ham bacon, meatloaf beef landjaeger shoulder porchetta frankfurter pastrami alcatra.
-                                </p>
-                            </div>
-                            <div className="six wide right floated column">
-                                <img src={PlaceholderImage} className="ui large bordered rounded image" alt="Project"/>
-                            </div>
-                        </div>
-                        <div className="row">
-                            <div className="center aligned column">
-                                <a className="ui huge button">Check Them Out</a>
-                            </div>
-                        </div>
+                      <Grid>
+                        <Grid.Row>
+                          <Header as='h2' icon textAlign='center'>
+                            <Icon name='lightning' circular />
+                            <Header.Content>
+                              Project Spotlight
+                            </Header.Content>
+                          </Header>
+                        </Grid.Row>
+                        <Grid.Row verticalAlign='middle'>
+                          <Grid.Column width={10} >
+                            <h3 className="ui header">augur <Label color='orange' horizontal>WIP</Label></h3>
+                            <p>augur provides a suite of Python machine learning APIs as REST microservices that can be fetched and interfaced through a React frontend.</p>
+                            <Button as='a' href='https://github.com/rmbrntt/augur' target='_blank' animated='vertical'>
+                              <Button.Content visible>Check It Out</Button.Content>
+                              <Button.Content hidden>
+                                <Icon name='github' />
+                              </Button.Content>
+                            </Button>
+                          </Grid.Column>
+                          <Grid.Column width={6} floated='right'>
+                            <Image src={AugurImage} fluid bordered  label={{ color: 'orange', icon: 'road', corner:'right' }}/>
+                          </Grid.Column>
+                        </Grid.Row>
+                      </Grid>
                     </div>
                 </div>
-                <div className="ui vertical stripe quote segment">
+                {/* <div className="ui vertical stripe quote segment">
                     <div className="ui equal width stackable internally celled grid">
                         <div className="center aligned row">
                             <div className="column">
@@ -60,7 +74,7 @@ class Home extends Component {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
                 {/* <div className="ui vertical stripe segment">
                     <div className="ui text container">
                         <h3 className="ui header">Blog Feed 1</h3>
@@ -75,7 +89,7 @@ class Home extends Component {
                     </div>
                 </div> */}
 
-            </div>
+            </Container>
 
         );
     }

@@ -6,7 +6,6 @@ import MenuSidebar from './MenuSidebar';
 import Card from './Card';
 import PlaceholderImage from "../images/placeholder_image.png";
 import {Router, Route, Link} from 'react-router-dom';
-import BlogContainer from '../containers/BlogContainer';
 
 class Home extends Component {
     render() {
@@ -75,7 +74,6 @@ class Home extends Component {
 
                     </div>
                 </div> */}
-                <BlogContainer />
 
             </div>
 

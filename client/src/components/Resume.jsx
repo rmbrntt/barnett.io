@@ -26,8 +26,8 @@ const POSITIONS = [
           'Developed a page object model test suite in C# for automated UI regression testing of a large scale web platform, providing over 85% coverage',
           'Created an API service to fetch and integrate remotely maintained BDD/Gherkin features on test suite deploy and execution',
           'Built a continuous integration pipeline to deploy a grid of nodes for parallelized and multi-browser execution of tests, reducing manual testing utilization over 40 hours per sprint',
-          'Designed an API middleware service in Python to process webhook requests from the DevOps toolchain, automating triggers and dependencies in the DevOps workflow across independent services (Bamboo, Bitbucket, JIRA, Octopus, etc)',
-          'Transformed the quality of delivered work and institutional knowledge retainment company-wide by establishing knowledge bases for Tech and Consulting teams to transparently collaborate on projects, requirements, meetings, and timelines.',
+          'Designed an API middleware service in Python to process webhook requests from the DevOps toolchain, automating triggers and dependencies in the DevOps workflow across independent services (Bamboo, Bitbucket, JIRA, Octopus, etc.)',
+          'Transformed the quality of delivered work and institutional knowledge retainment company-wide by establishing knowledge bases for Tech and Consulting teams to transparently collaborate on projects, requirements, meetings, and timelines',
         ]
     },
     {

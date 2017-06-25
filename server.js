@@ -21,7 +21,7 @@ const app = express();
 
 app.set('port', (8080));
 
-app.use('/', express.static(path.join(__dirname, '/build')));
+app.use('/', express.static(path.join(__dirname, '/client/build')));
 app.listen(app.get('port'), () => {
   console.log(`Server running at: http://localhost:${app.get('port')}/`); // eslint-disable-line no-console
 });

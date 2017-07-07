@@ -3,7 +3,7 @@ import {Route, Link, NavLink} from 'react-router-dom'
 import { Menu } from 'semantic-ui-react'
 
 const Header = () => (
-<div className='ui inverted vertical center aligned header segment'>
+<div className='ui inverted vertical center aligned header segment' id='header'>
     <div className='ui container'>
         <Menu inverted secondary pointing>
             <NavLink exact to="/" className="item">Home</NavLink>

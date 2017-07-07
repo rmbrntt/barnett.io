@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Footer = () => (
-  <div className="ui inverted vertical footer segment">
+  <div className="ui inverted vertical footer segment" id='footer'>
       <div className="ui container">
           <div className="ui stackable inverted divided centered equal height stackable grid">
               {/* <div className="three wide column">

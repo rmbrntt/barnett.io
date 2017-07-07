@@ -1,4 +1,14 @@
+#main-container {
+    min-height: 90.00vh;
+}
 
+#header {
+  min-height: 5.00vh;
+}
+
+#footer {
+  min-height: 5.00vh;
+}
 
 .hidden.menu {
   display: none;

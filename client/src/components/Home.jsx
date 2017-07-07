@@ -16,7 +16,7 @@ import { Container, Header, Icon, Item, Grid, Image, Divider, Button, Label } fr
 class Home extends Component {
     render() {
         return (
-            <Container fluid>
+            <Container fluid id='main-container'>
               <div className='ui inverted vertical masthead center aligned segment'>
                     <div className="ui middle aligned stackable grid container">
                         <div className="row">

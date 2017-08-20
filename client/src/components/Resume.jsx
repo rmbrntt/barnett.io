@@ -3,10 +3,17 @@ import {Link} from 'react-router-dom';
 import styles from './Resume.css';
 
 const POSITIONS = [
+  {
+      company: 'TrackMaven',
+      location: 'Washington, DC',
+      date: 'August 2017 - Present',
+      title: 'Software Engineer',
+      details: []
+  },
     {
         company: 'KCIC',
         location: 'Washington, DC',
-        date: 'June 2016 - Present',
+        date: 'June 2016 - August 2017',
         title: 'Development Manager',
         details: [
           'Developed a SPA in React to act as the frontend interface for a suite of microservice backends',

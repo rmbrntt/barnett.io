@@ -6,6 +6,7 @@ import MenuSidebar from './MenuSidebar';
 import Card from './Card';
 import PlaceholderImage from "../images/placeholder_image.png";
 import AugurImage from "../images/augurlabs.png";
+import DeaddropImage from "../images/deaddrop.png";
 
 import {Router, Route, Link} from 'react-router-dom';
 import { Container, Header, Icon, Item, Grid, Image, Divider, Button, Label } from 'semantic-ui-react';
@@ -24,8 +25,8 @@ class Home extends Component {
                                 <Card/>
                             </div>
                             <div className="ten wide left floated column">
-                                <h1 className='ui header inverted'>Fullstack Developer and Applied ML Engineer</h1>
-                                <h2>Building applications that implement machine learning pipelines to streamline business workflows.</h2>
+                                <h1 className='ui header inverted'>Fullstack Engineer</h1>
+                                <h2>Experienced software development professional building out apps in Python and React. </h2>
                             </div>
                         </div>
                     </div>
@@ -42,7 +43,7 @@ class Home extends Component {
                           </Header>
                         </Grid.Row>
                         <Grid.Row verticalAlign='middle'>
-                          <Grid.Column width={10} >
+                          {/* <Grid.Column width={10} >
                             <h3 className="ui header">augur <Label color='orange' horizontal>WIP</Label></h3>
                             <p>augur provides a suite of Python machine learning APIs as REST microservices that can be fetched and interfaced through a React frontend.</p>
                             <Button as='a' href='https://github.com/rmbrntt/augur' target='_blank' animated='vertical'>
@@ -54,6 +55,19 @@ class Home extends Component {
                           </Grid.Column>
                           <Grid.Column width={6} floated='right'>
                             <Image src={AugurImage} fluid bordered  label={{ color: 'orange', icon: 'road', corner:'right' }}/>
+                          </Grid.Column> */}
+                          <Grid.Column width={10} >
+                            <h3 className="ui header">deaddrop <Label color='orange' horizontal>WIP</Label></h3>
+                            <p>deaddrop provides a service for dropping messages at geo-locations. </p>
+                            <Button as='a' href='https://github.com/rmbrntt/deaddrop' target='_blank' animated='vertical'>
+                              <Button.Content visible>Check It Out</Button.Content>
+                              <Button.Content hidden>
+                                <Icon name='github' />
+                              </Button.Content>
+                            </Button>
+                          </Grid.Column>
+                          <Grid.Column width={6} floated='right'>
+                            <Image src={DeaddropImage} fluid bordered  label={{ color: 'orange', icon: 'road', corner:'right' }}/>
                           </Grid.Column>
                         </Grid.Row>
                       </Grid>

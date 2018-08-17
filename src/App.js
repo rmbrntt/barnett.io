@@ -7,11 +7,9 @@ import RepoView from 'containers/RepoView';
 import Header from 'components/Header';
 
 const AppWrapper = styled.div`
-  margin: 0 auto;
-  display: flex;
-  min-height: 100%;
-  flex-direction: column;
-  text-align: center;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 100%;
 `;
 
 const App = () => (

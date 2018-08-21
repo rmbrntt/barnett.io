@@ -12,11 +12,10 @@ export default styled(NavLink)`
   cursor: pointer;
   outline: 0;
   font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
-  font-size: 10px;
+  font-size: 16px;
   color: rgba(255, 255, 255, 0.7);
 
   &.active {
-    font-weight: ${props => (props.lead ? '' : '600')};
     border-top: ${props => (props.lead ? '' : '1.5px solid #fff')};
     color: ${props => (props.lead ? 'rgba(255, 255, 255, 0.7)' : '#fff')};
   }

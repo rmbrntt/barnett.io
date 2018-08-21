@@ -9,7 +9,7 @@ const Wrapper = styled.div`
 `;
 
 const Hero = styled.div`
-  background-color: #1b1c1d;
+  background-color: black;
   padding: 25px;
   color: white;
   grid-row: 1;

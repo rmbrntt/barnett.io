@@ -1,12 +1,12 @@
 import React from 'react';
 import {Route} from 'react-router-dom';
-import Header from 'components/Header';
+import NavBar from 'containers/NavBar';
 import App from './App';
 
 describe('<App />', () => {
-  it('should render the header', () => {
+  it('should render the NavBar', () => {
     const wrapper = shallow(<App />);
-    expect(wrapper.find(Header).length).toBe(1);
+    expect(wrapper.find(NavBar).length).toBe(1);
   });
 
   it('should render some routes', () => {

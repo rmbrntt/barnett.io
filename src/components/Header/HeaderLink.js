@@ -1,11 +1,11 @@
-import {Link} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 import styled from 'styled-components';
 
-export default styled(Link)`
-  display: inline-flex;
-  padding: 0.6em 1em;
+export default styled(NavLink)`
+  text-align: left;
+  vertical-align: middle;
+  padding: 0.3em 5em 0.3em 0.3em;
   text-decoration: none;
-  border-radius: 1px;
   -webkit-font-smoothing: antialiased;
   -webkit-touch-callout: none;
   user-select: none;
@@ -13,15 +13,18 @@ export default styled(Link)`
   outline: 0;
   font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-size: 10px;
-  border-bottom: 1.5px solid #fff;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.7);
 
-  &:active {
-    font-weight: 600;
-    color: #fff;
+  &.active {
+    font-weight: ${props => (props.lead ? '' : '600')};
+    border-top: ${props => (props.lead ? '' : '1.5px solid #fff')};
+    color: ${props => (props.lead ? 'rgba(255, 255, 255, 0.7)' : '#fff')};
   }
 
   &:hover {
-    color: #fff;
+    color: ${props =>
+      props.lead ? 'rgba(255, 255, 255, 0.7)' : 'rgba(255, 255, 255, 8)'};
+    background: ${props =>
+      props.lead ? 'rgba(255, 255, 255, 0)' : 'rgba(255, 255, 255, 0.05)'};
   }
 `;

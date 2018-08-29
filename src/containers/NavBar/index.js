@@ -12,13 +12,13 @@ const Wrapper = styled.div`
   grid-column-gap: 1%;
 
   /* Medium screens */
-  @media (max-width: 800px) {
+  @media (max-width: 768px) {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
   }
 
   /* Small screens */
-  @media (max-width: 500px) {
+  @media (max-width: 320px) {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
   }

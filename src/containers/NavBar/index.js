@@ -4,7 +4,7 @@ import StyledNavLink from './StyledNavLink';
 
 const Wrapper = styled.div`
   background-color: #1b1c1d;
-  padding: 15px 0px 15px 0px;
+  padding: 0px;
   color: white;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;

@@ -52,7 +52,7 @@ export default styled(NavLink)`
   }
 
   &.active {
-    border-top: ${props => (props.lead ? '' : '1.5px solid #fff')};
+    border-bottom: ${props => (props.lead ? '' : '1.5px solid #fff')};
     color: ${props => (props.lead ? 'rgba(255, 255, 255, 0.7)' : '#fff')};
     ${media.handheld};
     ${media.tablet};

@@ -8,6 +8,6 @@ injectGlobal`
     width: 100%;
     margin: 0;
     padding: 0;
-    font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font-family: "Gotham, "Avenir Next", "Proxima Nova",  "Helvetica";
   }
 `;

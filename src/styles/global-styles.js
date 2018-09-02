@@ -8,6 +8,8 @@ injectGlobal`
     width: 100%;
     margin: 0;
     padding: 0;
-    font-family: "Gotham, "Avenir Next", "Proxima Nova",  "Helvetica";
+    font-family: Gotham,Avenir Next,Proxima Nova,Helvetica; 
   }
 `;
+
+//font-family: -apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica neue,helvetica,ubuntu,roboto,noto,segoe ui,arial,sans-serif;

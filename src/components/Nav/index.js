@@ -108,6 +108,10 @@ const NavLink = styled(RouterLink)`
     @media (min-width: 30em) {
         font-size: .900rem;
     }
+
+    @media (min-width: 30em) {
+        font-size: .900rem;
+    }
 `
 
 const NavBar = () => (
@@ -116,7 +120,7 @@ const NavBar = () => (
         ryan barnett
       </Home>
       <Nav>
-        <NavLink to="/repos">work</NavLink>
+        <NavLink to="/work">work</NavLink>
         <NavLink to="/about">about</NavLink>
       </Nav>
     </Wrapper>

@@ -61,8 +61,8 @@ const H1 = styled.h1`
 const Hero = (props) => (
     <Wrapper>
         <Content>
-            <H3>Ryan Barnett. Full stack engineer in Washington, DC.</H3>
-            <H1>Currently building apps in Python, React, and Kubernetes.</H1>
+            <H3>Ryan Barnett. Software engineer in Washington, DC.</H3>
+            <H1>I do full stack things with Python, React, and Kubernetes.</H1>
         </Content>
     </Wrapper>
 )

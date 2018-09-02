@@ -5,9 +5,10 @@ import {Switch, Route} from 'react-router-dom';
 import HomePage from 'containers/HomePage';
 import AboutPage from 'containers/AboutPage';
 
-import RepoView from 'containers/RepoView';
+import ProjectPage from 'containers/ProjectPage';
 //import NavBar from 'containers/NavBar';
 import NavBar from 'components/Nav';
+import Hero from 'components/Hero';
 import SocialNav from 'components/SocialNav';
 
 const Wrapper = styled.div`
@@ -17,10 +18,11 @@ const Wrapper = styled.div`
   grid-template-areas: 'header header' 'main main' 'footer footer';
   height: 100vh;
 `;
-
 const Header = styled.header`
   grid-area: header;
 `;
+
+// TODO: use measure props
 const Main = styled.main`
   grid-area: main;
 `;
@@ -35,11 +37,12 @@ const App = () => (
     </Helmet>
     <Header>
       <NavBar />
+      <Route exact path="/" component={Hero} />
     </Header>
     <Main>
       <Switch>
         <Route exact path="/" component={HomePage} />
-        <Route path="/repos" component={RepoView} />
+        <Route path="/work" component={ProjectPage} />
         <Route path="/about" component={AboutPage} />
       </Switch>
     </Main>

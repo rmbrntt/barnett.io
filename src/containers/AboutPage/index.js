@@ -10,11 +10,12 @@ const Wrapper = styled.article`
     justify-content: flex-start;
     align-items: center;
     align-content: stretch;
-    padding: 1rem;
-
+    padding-top: 128px;
+    padding-bottom: 128px;
 `;
 
-const Avatar = styled.img`
+export const Avatar = styled.img.attrs({
+    src: profile})`
     border-style: solid;
     border-width: 1px;
     border-color: rgba(0, 0, 0, .1);
@@ -23,20 +24,28 @@ const Avatar = styled.img`
     width: 400px;
     max-width: 30em;
 `
-const Bio = styled.div`
+export const Bio = styled.div`
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    max-width: 30em;
     & p {
-        text-align: right;
+        color: rgba(0, 0, 0, .5);
+        text-align: left;
+        font-size: 1.25rem;
+        line-height: 1.5;
     }
 `
 
-const FavoriteList = styled.div`
+export const FavoriteList = styled.div`
+    max-width: 30em;
+    
     & h3 {
         text-align: center;
     }
     & ul {
         list-style-type: none;
         padding: 0px;
-        max-width: 30em;
+        
         margin-right: 0px;
         margin-left: 0px;
     }
@@ -92,12 +101,14 @@ const AboutPage = () => (
   <Wrapper>
     <Avatar src={profile}/>
     <Bio>
-        <p>I'm Ryan. I write software. Currently, I work for a startup building out microservices that aggregate and analyze social platform data.</p>
+        <p>I'm Ryan. I write software. I work for a startup building out microservices that aggregate and analyze social platform data.</p>
     </Bio>
     <FavoriteList>
         <h3>favs & haunts</h3>
         <ul>
             <li><a href="https://news.ycombinator.com/" target="_blank">hackernews</a></li>
+            <li><a href="https://www.schneier.com/crypto-gram/" target="_blank">crypto-gram</a></li>
+            <li><a href="https://react.statuscode.com/" target="_blank">react status</a></li>
         </ul> 
     </FavoriteList>
   </Wrapper>

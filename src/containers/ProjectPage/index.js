@@ -6,8 +6,8 @@ export const ProjectList = styled.div`
     & ul {
         list-style-type: none;
         padding: 0px;
-        margin-right: 10px;
-        margin-left: 10px;
+        margin-right: 15em;
+        margin-left: 15em;
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
@@ -17,7 +17,20 @@ export const ProjectList = styled.div`
         padding-bottom: 128px;
         color: #1d0016;
 
+        @media screen and (max-width: 768px) {
+            margin-right: 3em;
+            margin-left: 3em;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            align-items: stretch;
+            align-content: stretch;
+        }
+
         @media screen and (max-width: 300px) {
+            margin-right: 0em;
+            margin-left: 0em;
             display: flex;
             flex-direction: column;
             flex-wrap: nowrap;
@@ -26,14 +39,7 @@ export const ProjectList = styled.div`
             align-content: stretch;
         }
     
-        @media screen and (max-width: 768px) {
-            display: flex;
-            flex-direction: column;
-            flex-wrap: nowrap;
-            justify-content: flex-start;
-            align-items: stretch;
-            align-content: stretch;
-        }
+
     }
 
 `

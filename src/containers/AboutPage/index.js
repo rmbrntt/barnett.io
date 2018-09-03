@@ -12,6 +12,8 @@ const Wrapper = styled.article`
     align-content: stretch;
     padding-top: 128px;
     padding-bottom: 128px;
+
+
 `;
 
 export const Avatar = styled.img.attrs({
@@ -20,10 +22,17 @@ export const Avatar = styled.img.attrs({
     border-width: 1px;
     border-color: rgba(0, 0, 0, .1);
     border-radius: 10%;
-    height: 400px;
-    width: 400px;
-    max-width: 30em;
+    max-width: 20em;
+
+    @media screen and (max-width: 300px) {
+        max-width: 6em;
+    }
+
+    @media screen and (max-width: 768px) {
+        max-width: 10em;
+    }
 `
+
 export const Bio = styled.div`
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -33,6 +42,11 @@ export const Bio = styled.div`
         text-align: left;
         font-size: 1.25rem;
         line-height: 1.5;
+
+        @media screen and (max-width: 768px) {
+            font-size: 1rem;
+            max-width: 15em;
+        }
     }
 `
 
@@ -99,7 +113,7 @@ export const FavoriteList = styled.div`
 
 const AboutPage = () => (
   <Wrapper>
-    <Avatar src={profile}/>
+        <Avatar src={profile}/>
     <Bio>
         <p>I'm Ryan. I write software. I work for a startup building out microservices that aggregate and analyze social platform data.</p>
     </Bio>
